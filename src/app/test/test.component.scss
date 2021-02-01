@@ -1,0 +1,73 @@
+.question-container{
+    width: 600px;
+}
+
+.progress .bar{
+    background-color: #e5e5e5;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress .bar .filled{
+    position: relative;
+    background-color: #0080ff;
+    height: 30px;
+}
+
+.progress .details{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    color: #0080ff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.progress .details div{
+    width: 50%;
+}
+
+.progress .details .percentage{
+    text-align: right;
+}
+
+.question{
+    margin-top: 10px;
+}
+
+.question .text{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.question .answers{
+    margin-top: 15;
+    display: flex;
+    flex-direction: column;
+}
+
+.question .answers .answer{
+    padding: 5px;
+}
+
+.question .answers .answer:first-child{
+    margin-top: 10px;
+}
+
+.actions{
+    margin-top: 30px;
+}
+
+.actions .left{
+    float: left;
+}
+
+.actions .right{
+    float:right;
+}
+
+.actions .right .btn.finish{
+    background-color: #000;
+}

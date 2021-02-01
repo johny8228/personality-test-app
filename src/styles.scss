@@ -1,1 +1,40 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 /* You can add global styles to this file, and also import other style files */
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #0080ff;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  color: #0080ff;
+  background-color: #0080ff;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: #0080ff;
+}
+
+.btn{
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #0080ff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #000;
+}
+
+.btn.big{
+    padding: 15px;
+}
+
+.btn.secondary{
+    background-color: #fff;
+    color: grey;
+}
+
+.btn.big.default{
+    background-color: #0080ff;
+}

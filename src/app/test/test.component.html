@@ -1,0 +1,31 @@
+<div *ngIf="questions && questions.length" class="question-container">
+    <div class="progress">
+        <div class="bar">
+            <div class="filled" [style.width.%]="(questionIndex+1)*100/questions.length"></div>
+        </div>
+        <div class="details">
+            <div class="title">Question {{questionIndex+1}} of {{questions.length}}</div>
+            <div class="percentage">{{(questionIndex+1)*100/questions.length}}%</div>
+        </div>
+    </div>
+    <div class="question">
+        <label class="text">{{currentQuestion.text}}</label>
+        <mat-radio-group class="answers" (change)="onAnswerChange($event)">
+            <mat-radio-button *ngFor="let answer of currentQuestion.answers" 
+                                class="answer"
+                                [checked]="answer.id === userAnswer?.id" 
+                                [value]="answer">
+                {{answer.text}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <div class="actions">
+        <div class="left">
+            <a *ngIf="questionIndex != 0" class="btn secondary previous" (click)="questionIndex = questionIndex - 1">Previous</a>
+            <a *ngIf="questionIndex != questions.length -1" class="btn next" (click)="questionIndex = questionIndex + 1">Next</a>
+        </div>
+        <div class="right">
+            <a *ngIf="questionIndex == questions.length -1" class="btn big finish" routerLink="/result">Finish</a>
+        </div>
+    </div>
+</div>
